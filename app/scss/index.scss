@@ -1,5 +1,5 @@
 html, body {
-  height: 100%;
+  min-height: 100%;
   background-color: #000;
   color: #FFF;
 }
@@ -22,6 +22,10 @@ html, body {
   min-height: 100%;
   flex: 1;
   border-right: 1px solid #000;
+  .actions {
+    padding: 15px;
+    min-height: 62px;
+  }
 }
 #right {
   position: relative;
@@ -30,27 +34,52 @@ html, body {
   min-width: 539px;
 }
 .entry-list {
+  border-top: 2px solid #000;
   padding: 0;
   margin: 0;
-  li {
+  li.entry {
     padding: 15px;
     list-style: none;
     position: relative;
     border-bottom: 1px solid #000;
     overflow: visible;
     cursor: pointer;
-    &:hover {
-
-    }
     .title {
       font-size: 18px;
+      line-height: 20px;
       margin-bottom: 8px;
+      .author {
+        white-space: nowrap;
+        font-size: 11px;
+        margin-left: 2px;
+        a {
+          color: #FFF;
+        }
+      }
     }
     .description {
       line-height: 1.4em;
       margin-bottom: 8px;
     }
-    .indicator {
+    .unread-indicator {
+      display: none;
+      position: absolute;
+      width: 15px;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      overflow: hidden;
+      span {
+        display: block;
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-color: #000;
+      }
+    }
+    .active-indicator {
       display: none;
       position: absolute;
       width: 20px;
@@ -70,14 +99,23 @@ html, body {
         transform: rotate(45deg);
       }
     }
-    &.active .indicator {
+    &.active .active-indicator, &.unread .unread-indicator {
       display: block;
     }
+    &.entry-small {
+      .title {
+        margin-bottom: 0px;
+      }
+      .statistics {
+        margin-top: 3px;
+      }
+    }
   }
-}
+} // .entry-list
 
 .entry {
   padding: 25px;
+  border-bottom: 2px solid #000;
   h1 {
     font-size: 28px;
     margin: 0px 0px 1em;
@@ -87,7 +125,10 @@ html, body {
     font-size: 15px;
     line-height: 1.6em;
   }
-}
+} // .entry
+.replies {
+  padding: 25px;
+} // .replies
 
 .statistics {
   float: right;
@@ -101,6 +142,14 @@ html, body {
       top: 2px;
     }
   }
+} // .statistics
+
+.actions {
+  h4 {
+    margin: 0;
+    line-height: 34px;
+  }
+  min-height: 28px;
 }
 
 // Theme
@@ -132,50 +181,90 @@ body {
   background-color: $dim;
   font-family: 'Source Sans Pro', sans-serif;
 }
+.btn {
+  border: 0;
+  &.btn-primary {
+    color: $lime;
+    background-color: $darkest;
+    &:hover {
+      color: $darkest;
+      background-color: $lime;
+    }
+  }
+}
 .navbar-default {
   border: none;
   background-color: $darkest;
   .navbar-brand {
-    color: $red;
+    color: $lime;
   }
   .navbar-nav {
     &>li a {
       color: $bright;
+      &:hover {
+        color: $brighter;
+      }
     }
     &>.active a {
       color: $brighter;
       background-color: $darker;
+      &:hover {
+        color: $brightest;
+        background-color: $darker;
+      }
     }
+  }
+  .label {
+    font-size: 100%;
+    padding: .2em .6em .3em;
+    background-color: $red2;
   }
 }
 #left {
-  background-color: $dark;
+  background-color: $darker;
   border-right: 2px solid $light;
 }
-.entry-list li {
-  color: $bright;
+#right {
+
+}
+.entry-list {
   border-color: $light;
-  &:nth-child(even), &:nth-child(even) .indicator span {
-    background-color: $dimmer;
-  }
-  &:hover, &:hover .indicator span {
-    background-color: $darker;
-  }
-  .title {
-    color: $brighter;
-  }
-  .statistics {
-    color: $lighter;
-    span {
-      color: $bright;
+  background-color: $dark;
+  li.entry {
+    color: $bright;
+    border-color: $light;
+    &:nth-child(even), &:nth-child(even) .active-indicator span {
+      background-color: $dimmer;
     }
-  }
-  .indicator span {
-    border: 2px solid $light;
-    background-color: $dark;
+    &:hover, &:hover .active-indicator span {
+      background-color: $darker;
+    }
+    .title {
+      color: $brighter;
+      .author {
+        color: $lighter;
+        a {
+          color: $lighter;
+        }
+      }
+    }
+    .statistics {
+      color: $lighter;
+      span {
+        color: $bright;
+      }
+    }
+    .unread-indicator span {
+      background-color: $lime;
+    }
+    .active-indicator span {
+      border: 2px solid $light;
+      background-color: $dark;
+    }
   }
 }
 .entry {
+  border-color: $light;
   h1 {
     color: $brightest;
   }
