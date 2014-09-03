@@ -55,7 +55,7 @@ html, body {
       margin-bottom: 8px; }
       .entry-list li.entry .title .author {
         white-space: nowrap;
-        font-size: 11px;
+        font-size: 12px;
         margin-left: 2px; }
         .entry-list li.entry .title .author a {
           color: #FFF; }
@@ -109,14 +109,26 @@ html, body {
   border-bottom: 2px solid #000; }
   .entry h1 {
     font-size: 28px;
-    margin: 0px 0px 1em;
+    margin: 0px 0px 0.5em;
     color: #FFF; }
+    .entry h1 span.author {
+      margin-top: 1em;
+      display: block;
+      white-space: nowrap;
+      font-size: 14px; }
   .entry p {
     font-size: 15px;
     line-height: 1.6em; }
 
 .replies {
   padding: 25px; }
+  .replies .reply div.author {
+    display: block;
+    margin-bottom: 1em;
+    font-size: 14px; }
+  .replies p {
+    font-size: 15px;
+    line-height: 1.6em; }
 
 .statistics {
   float: right;
@@ -161,7 +173,7 @@ body {
     color: #d3d0c8;
     background-color: #262626; }
     .navbar-default .navbar-nav > .active a:hover {
-      color: #ffffff;
+      color: white;
       background-color: #262626; }
   .navbar-default .label {
     font-size: 100%;
@@ -198,13 +210,22 @@ body {
       border: 2px solid #454545;
       background-color: #2d2d2d; }
 
-.entry {
+.entry, .reply {
   border-color: #454545; }
-  .entry h1 {
-    color: #ffffff; }
-  .entry p {
+  .entry h1, .reply h1 {
+    color: white; }
+  .entry .author, .reply .author {
+    color: white; }
+    .entry .author a, .reply .author a {
+      color: #03dba7; }
+  .entry p, .reply p {
     color: #d3d0c8; }
-  .entry .statistics {
+  .entry .statistics, .reply .statistics {
     color: #7e7e7c; }
-    .entry .statistics span {
+    .entry .statistics span, .reply .statistics span {
       color: #d3d0c8; }
+
+.replies {
+  border-color: #454545; }
+  .replies p {
+    color: #d3d0c8; }
