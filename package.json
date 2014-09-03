@@ -1,24 +1,42 @@
 {
   "name": "gulp-starter",
-  "version": "1.0.0",
-  "author": "Juri Saltbacka",
+  "version": "1.2.1",
+  "author": {
+    "name": "Juri Saltbacka",
+    "email": "juri@3bola.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/3bola/gulp-starter.git"
+  },
   "scripts": {
-    "install": "bower install && gulp"
+    "install": "bower install && gulp -o"
   },
   "devDependencies": {
-    "gulp-livereload": "latest",
-    "tiny-lr": "latest",
-    "gulp": "latest",
-    "gulp-util": "latest",
-    "gulp-bower": "latest",
-    "express": "latest",
-    "bower": "latest",
-    "gulp-sass": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-imagemin": "latest",
-    "gulp-minify-css": "latest",
-    "gulp-uglify": "latest",
-    "gulp-rimraf": "latest",
-    "gulp-cache": "latest"
+    "bower": "*",
+    "del": "*",
+    "express": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-bower": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-declare": "*",
+    "gulp-define-module": "*",
+    "gulp-filter": "*",
+    "gulp-handlebars": "*",
+    "gulp-if": "*",
+    "gulp-if-else": "*",
+    "gulp-imagemin": "*",
+    "gulp-livereload": "*",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "*",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-useref": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "minimist": "*",
+    "opn": "*"
   }
 }

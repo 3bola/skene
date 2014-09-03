@@ -22,8 +22,8 @@ html, body {
   min-height: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   border-right: 1px solid #000; }
   #left .actions {
     padding: 15px;
@@ -34,8 +34,8 @@ html, body {
   min-height: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-width: 539px; }
 
 .entry-list {
@@ -96,7 +96,7 @@ html, body {
         margin-top: -10px;
         border: 1px solid #000;
         -webkit-transform: rotate(45deg);
-        transform: rotate(45deg); }
+                transform: rotate(45deg); }
     .entry-list li.entry.active .active-indicator, .entry-list li.entry.unread .unread-indicator {
       display: block; }
     .entry-list li.entry.entry-small .title {
@@ -171,7 +171,6 @@ body {
 #left {
   background-color: #262626;
   border-right: 2px solid #454545; }
-
 
 .entry-list {
   border-color: #454545;
