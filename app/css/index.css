@@ -59,6 +59,14 @@ html, body {
         margin-left: 2px; }
         .entry-list li.entry .title .author a {
           color: #FFF; }
+    .entry-list li.entry .genre {
+      margin-top: -0.5em;
+      font-size: 10px;
+      text-transform: uppercase; }
+    .entry-list li.entry .date {
+      margin-top: -0.5em;
+      font-size: 10px;
+      text-transform: uppercase; }
     .entry-list li.entry .description {
       line-height: 1.4em;
       margin-bottom: 8px; }
@@ -103,6 +111,9 @@ html, body {
       margin-bottom: 0px; }
     .entry-list li.entry.entry-small .statistics {
       margin-top: 3px; }
+    .entry-list li.entry.entry-label {
+      padding: 5px 15px 8px;
+      text-transform: uppercase; }
 
 .entry {
   padding: 25px;
@@ -200,6 +211,12 @@ body {
         color: #515151; }
         .entry-list li.entry .title .author a {
           color: #515151; }
+    .entry-list li.entry .label {
+      color: #03dba7; }
+    .entry-list li.entry .genre {
+      color: #515151; }
+      .entry-list li.entry .genre a {
+        color: #7e7e7c; }
     .entry-list li.entry .statistics {
       color: #515151; }
       .entry-list li.entry .statistics span {
@@ -209,6 +226,9 @@ body {
     .entry-list li.entry .active-indicator span {
       border: 2px solid #454545;
       background-color: #2d2d2d; }
+    .entry-list li.entry.entry-label {
+      background-color: #2d2d2d;
+      cursor: default; }
 
 .entry, .reply {
   border-color: #454545; }

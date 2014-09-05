@@ -61,6 +61,16 @@ html, body {
         }
       }
     }
+    .genre {
+      margin-top: -.5em;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .date {
+      margin-top: -.5em;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
     .description {
       line-height: 1.4em;
       margin-bottom: 8px;
@@ -113,6 +123,10 @@ html, body {
       .statistics {
         margin-top: 3px;
       }
+    }
+    &.entry-label {
+      padding: 5px 15px 8px;
+      text-transform: uppercase;
     }
   }
 }
@@ -282,6 +296,15 @@ body {
         }
       }
     }
+    .label {
+      color: $lime;
+    }
+    .genre {
+      color: $lighter;
+      a {
+        color: $bright;
+      }
+    }
     .statistics {
       color: $lighter;
       span {
@@ -294,6 +317,10 @@ body {
     .active-indicator span {
       border: 2px solid $light;
       background-color: $dark;
+    }
+    &.entry-label {
+      background-color: $dark;
+      cursor: default;
     }
   }
 }
